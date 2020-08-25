@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Text, View } from "react-native";
+import styled from "styled-components";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -20,13 +21,15 @@ function HomeScreen() {
     (todayData - anniversaryData) / (1000 * 60 * 60 * 24) + 31 + 1;
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home Pages</Text>
-      <Text>{today}</Text>
-      <Text>D + {differenceData}</Text>
-    </View>
+    <ScreenContainer>
+      <ScreenText>Home Pages</ScreenText>
+      <ScreenText>{today}</ScreenText>
+      <ScreenText>D + {differenceData}</ScreenText>
+    </ScreenContainer>
   );
 }
+
+
 
 function SettingsScreen() {
   return (
@@ -78,3 +81,15 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const ScreenContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ScreenText = styled.Text`
+font-size: 30px;
+font-weight: 500;
+margin: 5px;
+`;
