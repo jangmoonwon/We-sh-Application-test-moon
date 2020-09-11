@@ -78,6 +78,7 @@ target 'weshapptest' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
   use_unimodules!
   use_native_modules!
 
