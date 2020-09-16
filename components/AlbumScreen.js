@@ -24,32 +24,48 @@ function AlbumScreen() {
 
   if (selectedImage !== null) {
     return (
-      <View style={styles.container}>
+      <Container>
         <Image
           source={{ uri: selectedImage.localUri }}
           style={styles.gallery}
         />
-      </View>
+      </Container>
     );
   }
 
   return (
     <Container>
-      <HeaderText>Gallery</HeaderText>
       <GalleryWrapper>
-        <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
-          <Text style={styles.buttonText}>사진 추가하기</Text>
-        </TouchableOpacity>
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
+        <Gallery />
       </GalleryWrapper>
+      <AddBtn onPress={openImagePickerAsync}>
+        <AddText>사진 추가하기</AddText>
+      </AddBtn>
     </Container>
   );
 }
 
 export default AlbumScreen;
 
-const Container = styled.View`
+const Container = styled.ScrollView`
   flex: 1;
-  background-color: #faf4f4;
+  /* background-color: blue; */
+`;
+
+const GalleryWrapper = styled.View`
+flex: 1;
+  flex-flow: column wrap;
+  flex-direction: row;
+  justify-content: center;
+  
 `;
 
 const HeaderText = styled.Text`
@@ -57,34 +73,38 @@ const HeaderText = styled.Text`
   font-size: 40px;
   font-weight: 400;
   color: #ff7272;
-  margin: 45px 0 30px 0;
+  margin: 50px 0 30px 0;
   background-color: #faf4f4;
 `;
 
-const GalleryWrapper = styled.View`
-  flex: 1;
-  background-color: blue;
+const AddBtn = styled.TouchableOpacity`
+  background-color: #68b0ab;
+  margin: 80px;
+  padding: 17px;
+  border-radius: 5px;
+`;
+
+const AddText = styled.Text`
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  color: #fff;
+`;
+
+const Gallery = styled.View`
+  width: 135px;
+  height: 160px;
+  background-color: #ff7e67;
+  margin: 1px;
 `;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  button: {
-    backgroundColor: "pink",
-    padding: 20,
-    borderRadius: 5,
-  },
-  buttonText: {
-    fontSize: 20,
-    color: "#fff",
-  },
   gallery: {
-    width: 200,
-    height: 200,
+    justifyContent: "center",
+    marginVertical: 100,
+    margin: 1,
+    width: 135,
+    height: 160,
     resizeMode: "contain",
   },
 });
