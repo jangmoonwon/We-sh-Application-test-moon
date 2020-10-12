@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 function AlbumBox() {

@@ -1,12 +1,12 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import HomeScreen from "./components/HomeScreen";
-import AlbumScreen from "./components/AlbumScreen";
-import Test from "./components/Test";
+import HomeScreen from "./src/components/HomeScreen";
+import AlbumScreen from "./src/components/AlbumScreen";
+import Test from "./src/components/Test";
 
 const Tab = createBottomTabNavigator();
 

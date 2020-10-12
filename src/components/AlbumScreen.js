@@ -1,6 +1,6 @@
 import * as React from "react";
-import styled from "styled-components";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import styled from "styled-components/native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 
 function AlbumScreen() {
@@ -25,10 +25,21 @@ function AlbumScreen() {
   if (selectedImage !== null) {
     return (
       <Container>
+        <GalleryWrapper>
+          <Gallery />
+          <Gallery />
+          <Gallery />
+          <Gallery />
+          <Gallery />
+          <Gallery />
+        </GalleryWrapper>
         <Image
           source={{ uri: selectedImage.localUri }}
           style={styles.gallery}
         />
+        <AddBtn onPress={openImagePickerAsync}>
+          <AddText>사진 삭제하기</AddText>
+        </AddBtn>
       </Container>
     );
   }
@@ -36,9 +47,6 @@ function AlbumScreen() {
   return (
     <Container>
       <GalleryWrapper>
-        <Gallery />
-        <Gallery />
-        <Gallery />
         <Gallery />
         <Gallery />
         <Gallery />
@@ -57,15 +65,12 @@ export default AlbumScreen;
 
 const Container = styled.ScrollView`
   flex: 1;
-  /* background-color: blue; */
 `;
 
 const GalleryWrapper = styled.View`
-flex: 1;
   flex-flow: column wrap;
   flex-direction: row;
   justify-content: center;
-  
 `;
 
 const HeaderText = styled.Text`
@@ -92,7 +97,7 @@ const AddText = styled.Text`
 `;
 
 const Gallery = styled.View`
-  width: 135px;
+  width: 123px;
   height: 160px;
   background-color: #ff7e67;
   margin: 1px;
@@ -100,11 +105,11 @@ const Gallery = styled.View`
 
 const styles = StyleSheet.create({
   gallery: {
+    backgroundColor: "#ff7e67",
     justifyContent: "center",
-    marginVertical: 100,
     margin: 1,
-    width: 135,
+    width: 123,
     height: 160,
-    resizeMode: "contain",
+    // resizeMode: "contain",
   },
 });
