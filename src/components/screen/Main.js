@@ -17,7 +17,7 @@ export default function MainScreen() {
     (todayData - anniversaryData) / (1000 * 60 * 60 * 24) + 1;
   return (
     <ScreenContainer>
-      <ScreenText>Home Screen</ScreenText>
+      <ScreenText>Main Screen</ScreenText>
       <ScreenText>{today}</ScreenText>
       <ScreenText>D + {differenceData}</ScreenText>
     </ScreenContainer>
