@@ -38,7 +38,11 @@ function AlbumScreen() {
           style={styles.gallery}
         />
         <AddBtn onPress={openImagePickerAsync}>
+<<<<<<< HEAD
           <AddText>사진 추가하기</AddText>
+=======
+          <AddText>사진 삭제하기</AddText>
+>>>>>>> origin/master
         </AddBtn>
       </Container>
     );
