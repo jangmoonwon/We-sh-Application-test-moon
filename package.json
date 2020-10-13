@@ -6,11 +6,6 @@
     "web": "expo start --web"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
-    "@react-native-community/cameraroll": "^4.0.0",
-    "@react-native-community/masked-view": "^0.1.10",
->>>>>>> origin/master
     "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/native": "^5.7.3",
     "@react-navigation/stack": "^5.9.0",
