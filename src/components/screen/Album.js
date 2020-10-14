@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components/native";
-import { Image, Text } from "react-native";
+import { Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 
 export default function AlbumScreen() {
