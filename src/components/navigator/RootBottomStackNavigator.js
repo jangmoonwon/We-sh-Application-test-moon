@@ -7,6 +7,7 @@ import { AntDesign } from "@expo/vector-icons";
 import MainScreen from "../screen/Main";
 import AlbumScreen from "../screen/Album";
 import ModalTest from "../screen/ModalTest";
+import ProfileEdit from "../screen/ProfileEdit";
 
 const Tab = createBottomTabNavigator();
 
@@ -43,6 +44,16 @@ export default function RootBottomStackNavigator() {
           component={ModalTest}
           options={{
             tabBarLabel: "Test",
+            tabBarIcon: ({ color, size }) => (
+              <AntDesign name="setting" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="ProfileEdit"
+          component={ProfileEdit}
+          options={{
+            tabBarLabel: "ProfileEdit",
             tabBarIcon: ({ color, size }) => (
               <AntDesign name="setting" size={size} color={color} />
             ),
