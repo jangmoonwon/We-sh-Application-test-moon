@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
 import Modal from "react-native-modal";
-import { Text } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import ProfileEdit from "../screen/ProfileEdit";
 
 export default function ModalTest({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <Container>
-      <Text style={{ margin: 50 }}>Modal Test Page</Text>
       <Modal
         isVisible={modalVisible}
         useNativeDriver={true}
@@ -35,7 +32,6 @@ export default function ModalTest({ navigation }) {
           <ModalSelectButton
             onPress={() => {
               setModalVisible(false);
-              
             }}
           >
             <ModalSelectText>선택 2</ModalSelectText>
